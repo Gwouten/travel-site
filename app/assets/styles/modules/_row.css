@@ -1,3 +1,10 @@
+@define-mixin columns $cols: 1, $gutter: 0px {
+  width: calc((100% - $(gutter) * ($(cols) - 1)) / $(cols));
+  &:not(:last-child) {
+    margin-right: $(gutter);
+  }
+}
+
 .row {
   @mixin clearfix;
 
@@ -12,9 +19,19 @@
       }
     }
 
+    &--gutters-large > * {
+      &:not(:last-child) {
+      }
+    }
+
     &__medium-4 {
       float: left;
       width: 33.33%;
+    }
+
+    &__medium-6 {
+      float: left;
+      @mixin columns 2, 100px;
     }
 
     &__medium-8 {
