@@ -8,6 +8,10 @@
 .row {
   @mixin clearfix;
 
+  &--t-margin {
+    padding-top: 80px;
+  }
+
   &__b-margin-bottom-until-medium {
     margin-bottom: 1rem;
   }
@@ -32,6 +36,16 @@
 
     &__b-margin-bottom-until-medium {
       margin-bottom: 0;
+    }
+  }
+
+  &--equal-height-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
     }
   }
 }
