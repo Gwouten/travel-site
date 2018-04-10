@@ -13,20 +13,10 @@
   }
 
   @mixin atMedium {
-    &--gutters > * {
-      &:not(:last-child) {
-        padding-right: 65px;
-      }
-    }
-
-    &--gutters-large > * {
-      &:not(:last-child) {
-      }
-    }
-
     &__medium-4 {
       float: left;
-      width: 33.33%;
+      @mixin columns 3, 100px;
+      /* width: 33.33%; */
     }
 
     &__medium-6 {
@@ -36,7 +26,8 @@
 
     &__medium-8 {
       float: left;
-      width: 66.66%;
+      @mixin columns 1.66, 0px;
+      /* width: 66.66%; */
     }
 
     &__b-margin-bottom-until-medium {
