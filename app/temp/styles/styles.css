@@ -597,11 +597,31 @@ a {
   }
   }
 
+.wrapper--no-padding-until-large {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+@media (min-width: 800px) {
+
+.wrapper--no-padding-until-large {
+      padding-left: 18px;
+      padding-right: 18px
+  }
+  }
+
 .page-section {
   padding: 1.2rem 0;
 }
 
 @media (min-width: 800px) {
+
+.page-section {
+    padding: 4.5rem 0
+}
+  }
+
+@media (min-width: 1010px) {
 
 .page-section {
     padding: 4.5rem 0
